@@ -1,0 +1,58 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+
+.navbar{
+
+border: none;
+background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
+color: #61122F;
+}
+body{
+	background: linear-gradient(130deg, #b32d2e 25%,#8a2424 25% 60%, #691c1c 60%);
+	color: 	silver;
+}
+
+body:hover,body:active{
+   color: white;
+}
+
+.glyphicon{
+	font-size: 30px;
+	color:#691313; 
+}
+
+.glyphicon:hover, .glyphicon:active{
+	color:coral;
+}
+
+.center{
+	width: 90%;
+	background-color: grey;
+
+}
+.container
+{
+	background-image: linear-gradient(to right, rgba(5,5,5,0), rgba(5,5,5,1));
+}
+.text-center{
+	font-size: 30px;
+}
+h1:hover,h1:active{
+	color: yellow;
+}
+
+h2{
+	text-align: center;
+}
+#myNavbar ul li a {
+	color: grey;
+}
+#myNavbar ul li a:hover, #mynavbar ul li a:active{
+	color:coral;
+}
+.navbar-brand{
+font-size: 30px;	
+}
