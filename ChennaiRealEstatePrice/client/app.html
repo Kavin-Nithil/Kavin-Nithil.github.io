@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chennai Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="img"></div>
+    <div class="Heading">சென்னை வீட்டு விலை கணிப்பு</div>
+
+    <div class="parent">
+      <div class="SQFT">
+        <h2>Area (Square Feet)</h2>
+        <input
+          class="area"
+          type="text"
+          id="uiSqft"
+          class="floatLabel"
+          name="Squareft"
+          value="1000"
+        />
+      </div>
+
+      <div class="BEDROOMS">
+        <h2>NO. OF BEDROOMS</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-bhk-1" name="uiBHK" value="1" />
+          <label for="radio-bhk-1">1</label>
+          <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked />
+          <label for="radio-bhk-2">2</label>
+          <input type="radio" id="radio-bhk-3" name="uiBHK" value="3" />
+          <label for="radio-bhk-3">3</label>
+          <input type="radio" id="radio-bhk-4" name="uiBHK" value="4" />
+          <label for="radio-bhk-4">4</label>
+          <input type="radio" id="radio-bhk-5" name="uiBHK" value="5" />
+          <label for="radio-bhk-5">5</label>
+        </div>
+      </div>
+
+      <div class="BATHROOMS">
+        <h2>NO OF BATHROOMS</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1" />
+          <label for="radio-bath-1">1</label>
+          <input
+            type="radio"
+            id="radio-bath-2"
+            name="uiBathrooms"
+            value="2"
+            checked
+          />
+          <label for="radio-bath-2">2</label>
+          <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3" />
+          <label for="radio-bath-3">3</label>
+          <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4" />
+          <label for="radio-bath-4">4</label>
+          <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5" />
+          <label for="radio-bath-5">5</label>
+        </div>
+      </div>
+
+      <div class="ROOMS">
+        <h2>TOTAL NO. OF ROOMS</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-room-1" name="uirooms" value="1" />
+          <label for="radio-room-1">1</label>
+          <input
+            type="radio"
+            id="radio-room-2"
+            name="uirooms"
+            value="2"
+            checked
+          />
+          <label for="radio-room-2">2</label>
+          <input type="radio" id="radio-room-3" name="uirooms" value="3" />
+          <label for="radio-room-3">3</label>
+          <input type="radio" id="radio-room-4" name="uirooms" value="4" />
+          <label for="radio-room-4">4</label>
+          <input type="radio" id="radio-room-5" name="uirooms" value="5" />
+          <label for="radio-room-5">5</label>
+          <input type="radio" id="radio-room-6" name="uirooms" value="6" />
+          <label for="radio-room-6">6</label>
+          <input type="radio" id="radio-room-7" name="uirooms" value="7" />
+          <label for="radio-room-7">7</label>
+        </div>
+      </div>
+
+      <div class="LOCATION">
+        <h2>LOCATION</h2>
+        <div>
+          <select class="location" name="" id="uiLocations">
+            <option value="" disabled="disabled" selected="selected">
+              Choose a Location
+            </option>
+            <option>Adyar</option>
+            <option>Anna Nagar</option>
+            <!--- <option>Chrompet</option>
+            <option>KK Nagar</option>
+            <option>Karapakkam</option>
+            <option>T Nagar</option>
+            <option>Velachery</option> --->
+          </select>
+        </div>
+      </div>
+      <div class="DISTANCE">
+        <h2>Distance from main road(in m)</h2>
+        <input
+          class="DistRoad"
+          type="text"
+          id="uidist"
+          class="floatLabel"
+          name="inMetres"
+          value="50000"
+        />
+      </div>
+
+      <div class="ZONE">
+        <h2>ZONE</h2>
+        <div>
+          <select class="Zone" name="" id="uiZone">
+            <option value="" disabled="disabled" selected="selected">
+              Choose a Zone
+            </option>
+            <option>A - Agricultural</option>
+            <option>C - Commercial</option>
+            <option>I - Industrial</option>
+            <option>RH - Highly Residential</option>
+            <option>RL - Low Residential</option>
+            <option>RM - Residential Medium density</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="SALE-CONDITION">
+        <h2>Condition of building</h2>
+        <div>
+          <select class="Salecond" name="" id="uiSalecond">
+            <option value="" disabled="disabled" selected="selected">
+              Choose Sale Condition
+            </option>
+            <option>AbNormal</option>
+            <option>Adjacent Land</option>
+            <option>Family</option>
+            <option>Normal</option>
+            <option>Partial</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="PARKING">
+        <h2>PARKING FACILITY</h2>
+        <div>
+          <select class="Park" name="" id="uiPark">
+            <option value="" disabled="disabled" selected="selected">
+              Select Parking facility
+            </option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="BUILDING-TYPE">
+        <h2>BUILDING TYPE</h2>
+        <div>
+          <select class="Typeofbuild" name="" id="uiType">
+            <option value="" disabled="disabled" selected="selected">
+              Select Building type
+            </option>
+            <option>Commercial</option>
+            <option>House</option>
+            <option>Others</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="STREET">
+        <h2>TYPE OF ROAD</h2>
+        <div>
+          <select class="Road" name="" id="uiRoad">
+            <option value="" disabled="disabled" selected="selected">
+              Select Road type
+            </option>
+            <option>Gravel</option>
+            <option>No Access</option>
+            <option>Paved</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="AGE">
+        <h2>AGE (in years)</h2>
+        <input
+          class="Age"
+          type="text"
+          id="uiage"
+          class="floatLabel"
+          name="inyears"
+          value="1000"
+        />
+      </div>
+
+      <div class="PRICE">
+        <button class="submit" onclick="onClickedEstimatePrice()" type="button">
+          ESTIMATE PRICE
+        </button>
+
+        <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+      </div>
+    </div>
+  </body>
+</html>
